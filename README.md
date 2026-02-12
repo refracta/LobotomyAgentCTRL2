@@ -1,7 +1,7 @@
 # LobotomyAgentCTRL2
 
-Source repository for the Lobotomy Corporation squad-hotkey mod: `refracta_AgentCTRL2_MOD`.
-This mod is a decompiled-and-modified derivative of abcdcode's original AgentCTRL mod.
+Source repository for the Lobotomy Corporation AgentCTRL-style agent-hotkey mod: `refracta_AgentCTRL2_MOD`.
+This project is based on decompiled source code from abcdcode's original AgentCTRL mod and then modified.
 
 ## Demo
 
@@ -9,10 +9,10 @@ This mod is a decompiled-and-modified derivative of abcdcode's original AgentCTR
 
 ## Quick Usage
 
-- Select agents, then press `Ctrl + F2` to `Ctrl + F12` to save a squad to a slot.
-- Press `F2` to `F12` to re-select the saved squad in that slot.
-- Press `Shift + F2` to `Shift + F12` to print the saved agent-name list for that slot.
-- Saved slots persist between game sessions.
+- Select agents, then press `Ctrl + F2` to `Ctrl + F12` to bind the selected agents to a slot.
+- Press `F2` to `F12` to select the agents bound to that slot.
+- Press `Shift + F2` to `Shift + F12` to print the saved agent-name list in the in-game system log.
+- Bound slots are persisted between game sessions.
 
 ## 1. Source
 
