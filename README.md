@@ -1,6 +1,7 @@
 # LobotomyAgentCTRL2
 
 Source repository for the Lobotomy Corporation squad-hotkey mod: `refracta_AgentCTRL2_MOD`.
+This mod is a decompiled-and-modified derivative of abcdcode's original squad assignment mod.
 
 ## Demo
 
