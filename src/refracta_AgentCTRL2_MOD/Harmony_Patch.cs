@@ -140,6 +140,38 @@ public class Harmony_Patch
 		return Input.GetKey((KeyCode)304) || Input.GetKey((KeyCode)303) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 	}
 
+	private static bool IsEnglishLanguage()
+	{
+		try
+		{
+			if (GlobalGameManager.instance != null)
+			{
+				string language = GlobalGameManager.instance.language;
+				if (!string.IsNullOrEmpty(language) && string.Equals(language, SupportedLanguage.en, StringComparison.OrdinalIgnoreCase))
+				{
+					return true;
+				}
+				if (GlobalGameManager.instance.Language == SystemLanguage.English)
+				{
+					return true;
+				}
+			}
+		}
+		catch
+		{
+		}
+		return false;
+	}
+
+	private static string Localize(string korean, string english)
+	{
+		if (IsEnglishLanguage())
+		{
+			return english;
+		}
+		return korean;
+	}
+
 	private static KeyCode GetFunctionKeyCode(int functionKeyNumber)
 	{
 		switch (functionKeyNumber)
@@ -255,7 +287,7 @@ public class Harmony_Patch
 	{
 		if (names == null || names.Count == 0)
 		{
-			return "[비어 있음]";
+			return Localize("[비어 있음]", "[Empty]");
 		}
 		return string.Join(", ", names.ToArray());
 	}
@@ -404,11 +436,11 @@ public class Harmony_Patch
 					}
 					List<string> selectedAgentNames = GetSelectedAgentNames(__instance);
 					SaveSlot(i, selectedAgentNames);
-					SendSystemMessage("Ctrl + F" + i + " 저장: " + FormatNameList(selectedAgentNames));
+					SendSystemMessage(Localize("Ctrl + F" + i + " 저장: " + FormatNameList(selectedAgentNames), "Ctrl + F" + i + " saved: " + FormatNameList(selectedAgentNames)));
 				}
 				else
 				{
-					SendSystemMessage("Ctrl + F" + i + " 저장 실패: 선택된 직원이 없습니다.");
+					SendSystemMessage(Localize("Ctrl + F" + i + " 저장 실패: 선택된 직원이 없습니다.", "Ctrl + F" + i + " save failed: no selected agents."));
 				}
 				continue;
 			}
@@ -426,7 +458,7 @@ public class Harmony_Patch
 				{
 					list = GetAgentNamesFromTargets(orCreateRuntimeSlot);
 				}
-				SendSystemMessage("Shift + F" + i + ": " + FormatNameList(list));
+				SendSystemMessage(Localize("Shift + F" + i + ": " + FormatNameList(list), "Shift + F" + i + ": " + FormatNameList(list)));
 				continue;
 			}
 			ShiftHandledByHold[i] = false;

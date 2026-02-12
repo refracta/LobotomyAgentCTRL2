@@ -36,8 +36,14 @@ if (-not (Test-Path $BuiltDllPath)) {
 }
 
 New-Item -ItemType Directory -Path (Join-Path $PackageRoot "Info\kr") -Force | Out-Null
+if (Test-Path (Join-Path $ModTemplatePath "Info\en\Info.xml")) {
+    New-Item -ItemType Directory -Path (Join-Path $PackageRoot "Info\en") -Force | Out-Null
+}
 Copy-Item -Path $BuiltDllPath -Destination (Join-Path $PackageRoot ($ModFolderName + ".dll")) -Force
 Copy-Item -Path (Join-Path $ModTemplatePath "Info\kr\Info.xml") -Destination (Join-Path $PackageRoot "Info\kr\Info.xml") -Force
+if (Test-Path (Join-Path $ModTemplatePath "Info\en\Info.xml")) {
+    Copy-Item -Path (Join-Path $ModTemplatePath "Info\en\Info.xml") -Destination (Join-Path $PackageRoot "Info\en\Info.xml") -Force
+}
 
 Compress-Archive -Path $PackageRoot -DestinationPath $ZipPath -Force
 

@@ -18,7 +18,7 @@ It is a modified version of decompiled code from abcdcode's original AgentCTRL m
 
 - Core patch logic: `src/refracta_AgentCTRL2_MOD/Harmony_Patch.cs`
 - Assembly metadata: `src/refracta_AgentCTRL2_MOD/AssemblyInfo.cs`
-- Mod info XML: `mod/refracta_AgentCTRL2_MOD/Info/kr/Info.xml`
+- Mod info XML: `mod/refracta_AgentCTRL2_MOD/Info/kr/Info.xml`, `mod/refracta_AgentCTRL2_MOD/Info/en/Info.xml`
 - Project file: `src/refracta_AgentCTRL2_MOD/refracta_AgentCTRL2_MOD.csproj`
 
 ## 2. Build
@@ -43,6 +43,7 @@ ZIP layout:
 
 - `refracta_AgentCTRL2_MOD/refracta_AgentCTRL2_MOD.dll`
 - `refracta_AgentCTRL2_MOD/Info/kr/Info.xml`
+- `refracta_AgentCTRL2_MOD/Info/en/Info.xml`
 
 ## Credits
 

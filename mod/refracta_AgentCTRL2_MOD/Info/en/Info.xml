@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+<name>AgentCTRL2 v0.0.2</name>
+<descs>
+<desc>Store selected agent-name lists and reselect them using hotkeys.</desc>
+<desc>Select agents and press Ctrl + F2~F12 to save the name list and print it to the system log.</desc>
+<desc>Press F2~F12 to reselect the saved agent list. (Persistent across sessions)</desc>
+<desc>Press Shift + F2~F12 to print the saved agent-name list for that slot in the system log.</desc>
+</descs>
+</info>
