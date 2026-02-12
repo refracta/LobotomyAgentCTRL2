@@ -1,7 +1,7 @@
 # LobotomyAgentCTRL2
 
-Source repository for the Lobotomy Corporation AgentCTRL-style agent-hotkey mod: `refracta_AgentCTRL2_MOD`.
-This project is based on decompiled source code from abcdcode's original AgentCTRL mod and then modified.
+This repository contains the source code for `refracta_AgentCTRL2_MOD`, a hotkey mod for managing agents in Lobotomy Corporation.
+It is a modified version of decompiled code from abcdcode's original AgentCTRL mod.
 
 ## Demo
 
