@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<info>
+<name>부대지정모드2 v0.0.1</name>
+<descs>
+<desc>직원 목록을 저장해 단축키로 저장해놓은 직원들을 선택하는 모드</desc>
+<desc>직원들을 선택한 상태에서 Ctrl + F2~F12를 누르면 이름 목록이 저장되고 시스템 로그에 출력된다.</desc>
+<desc>F2~F12를 누르면 저장된 직원 목록을 다시 선택한다. (세션 간 저장됨)</desc>
+<desc>Shift + F2~F12를 누르면 해당 슬롯에 저장된 직원 이름 목록을 시스템 로그에 출력한다.</desc>
+</descs>
+</info>
+
